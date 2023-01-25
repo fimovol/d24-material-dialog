@@ -7,7 +7,7 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -21,7 +21,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     CommonModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   exports:[
     MenuComponent,
