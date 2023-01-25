@@ -8,27 +8,38 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import {MatTableModule} from '@angular/material/table';
-
-
+import { A21asincronaComponent, DialogOverviewExampleDialog } from './a21asincrona/a21asincrona.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { DialogComponent } from './dialog/dialog.component';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     MenuComponent,
     VistaComponent,
     FormularioComponent,
     BusquedaComponent,
-    LoginComponent
+    LoginComponent,
+    A21asincronaComponent,
+    DialogComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    
   ],
   exports:[
     MenuComponent,
     VistaComponent,
     FormularioComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    A21asincronaComponent,
+    DialogComponent
   ]
 })
 export class PrincipalModule { }
