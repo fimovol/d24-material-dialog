@@ -22,11 +22,12 @@ import { MatMenuModule } from '@angular/material/menu';
 
 //ventana Modal
 import {MatDialogModule} from '@angular/material/dialog';
-import { Asincrona24Component } from './asincrona24/asincrona24.component';
+import { Asincrona24Component, DialogOverviewExampleDialog } from './asincrona24/asincrona24.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     Pagina1Component,
-    Asincrona24Component
+    Asincrona24Component,
+    DialogOverviewExampleDialog,
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    FormsModule,
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [
     {

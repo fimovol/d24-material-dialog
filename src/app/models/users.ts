@@ -3,3 +3,7 @@ export interface Users {
     name: string;
     username: string;
 }
+export interface DialogData {
+    animal: string;
+    name: string;
+  }

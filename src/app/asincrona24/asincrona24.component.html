@@ -1,28 +1,25 @@
-<form [formGroup]="addressForm" novalidate (ngSubmit)="openDialog()">
+<form novalidate>
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>Shipping Information</mat-card-title>
+      <mat-card-title class="my-3">
+        <img src="../../favicon.ico" alt="">
+        angular material
+      </mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Cual es tu nombre" formControlName="company">
-            <mat-error *ngIf="addressForm.controls['company'].hasError('required')">
-             tu nombre es <strong>obligatorio</strong>
-            </mat-error>
+            <input matInput placeholder="Cual es tu nombre" name="asd" [(ngModel)]="name">
           </mat-form-field>
         </div>
-      </div>
-      
-     
-      
-      
-      
-      
+      </div> 
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button class="mx-3" (click)="openDialog()" mat-raised-button color="primary" type="submit">Abrir dialog</button>
     </mat-card-actions>
+    <li class="m-3" *ngIf="animal">
+      Tu deporte favorito es: <i>{{animal}}</i>
+    </li>
   </mat-card>
 </form>
